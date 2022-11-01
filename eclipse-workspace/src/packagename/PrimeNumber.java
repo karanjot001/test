@@ -1,10 +1,13 @@
 package packagename;
-
+import java.lang.Math;
+import java.util.Scanner;
 public class PrimeNumber {
 	public static void main(String[] args) {
-		int number = 19;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number to find whether its prime or not");
+		int number = sc.nextInt();
 		int count = 0;
-		for(int i=1;i<=(number/2);i++) {
+		for(int i=1;i<=Math.sqrt(number);i++) {
 			if(number%i == 0) {
 				count++;
 			}
