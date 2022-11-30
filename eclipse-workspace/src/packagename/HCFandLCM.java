@@ -31,5 +31,8 @@ public class HCFandLCM{
 		}
 		System.out.println("HCF of "+a+" and "+b+" is: "+hcf);
 		
+		
+		
+		
 	}
 }
