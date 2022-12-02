@@ -2,22 +2,19 @@ package packagename;
 import java.util.Scanner;
 public class SumOfNumbers {
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int sum = 0;
-		int a = 0;
 		char op = 'a';
-		
-		while(op!='x' || op!='X') {
+		int sum = 0;
+		Scanner sc = new Scanner(System.in);
+		do {
 			System.out.println("Enter a number");
-			a = sc.nextInt();
-			sum = sum + a;
-			System.out.println("Do you want to continue? Press X to stop or Y to continue");
+			int number = sc.nextInt();
+			sum = sum + number;
+			System.out.println("Enter 'X' to stop or enter any other character to continue");
 			op = sc.next().charAt(0);
-			if(op == 'x' || op == 'X') {
-				break;
-			}
-		}
 		
-		System.out.println("Sum: "+sum);
+		}while(op != 'x');
+		
+		System.out.println("SUM: "+sum);
+		
 	}
 }

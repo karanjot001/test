@@ -1,34 +1,38 @@
 package packagename;
+import java.util.Scanner;
 
-public class HCFandLCM {
-	public static void main(String[] args) {
-		int a = 2, b = 8;
-		System.out.println("HCF of "+a+" and "+b);
+public class HCFandLCM{
+	public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter two numbers to find their LCM and HCF");
+		int a = sc.nextInt();
+		int b = sc.nextInt();
 		
-		int hcf = 1;
-		int temp = 0;
-		while(hcf <= b) {
-			if((a%hcf == 0) && (b%hcf == 0)) {
-				temp = hcf;
+		System.out.println("***** LCM *****");
+		int lcm = a>b ? a:b;
+		while(true) {
+			if(lcm%a == 0 && lcm%b == 0) {
+				System.out.println("LCM of "+a+" and "+b+" is: "+lcm);
+				break;
 			}
-			hcf++;
+			lcm++;
 		}
-		System.out.printf("The HCF of %d and %d is %d.", a, b, temp);
+		
+		System.out.println("\n***** HCF *****");
+		
+		int div=1;
+		int max = a>b ? a:b;
+		int hcf = 0;
+		while(div<max) {
+			if(a%div == 0 && b%div == 0) {
+				hcf = div;
+			}
+			div++;
+		}
+		System.out.println("HCF of "+a+" and "+b+" is: "+hcf);
 		
 		
-		System.out.println("\n\nLCM of "+a+" and "+b);
-		int lcm = 0;
-
-	    // maximum number between n1 and n2 is stored in lcm
-	    lcm = (a > b) ? a : b;
-
-	    // Always true
-	    while(true) {
-	      if( lcm % a == 0 && lcm % b == 0 ) {
-	        System.out.printf("The LCM of %d and %d is %d.", a, b, lcm);
-	        break;
-	      }
-	      lcm++;
-	    }
+		
+		
 	}
 }
