@@ -29,5 +29,6 @@ public class stringPalindrome {
 		ch = sc.next().charAt(0);
 	}while(ch == 'y' || ch == 'Y');
 	System.out.print("You have reached to the end of the program. Thankyou!");
+
 	}
 }

@@ -3,8 +3,12 @@ import java.util.Scanner;
 public class ArmstrongNumber2 {
 	public static void main(String[] args) {
 
-		int i = 0;
-		for(int j=1;j<=10;j++) {
+		System.out.println("Enter two numbers to find all the armstrong numbers between them");
+		Scanner sc = new Scanner(System.in);
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		int i = a;
+		for(int j=a;j<=b;j++) {
 			int rem = 0;
 			int sum = 0;
 			int OriginalNum = i;
@@ -19,7 +23,7 @@ public class ArmstrongNumber2 {
 			else {
 				System.out.println(OriginalNum+ " is not an Armstrong Number");
 			}
-			i = j;
+			i = j+1;
 		}
 	}
 }
